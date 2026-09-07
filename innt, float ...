@@ -1,0 +1,23 @@
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+        //float i = 9.4F;
+        //float y = 4.1F;
+        //System.out.println(i+y);
+        //System.out.print("Ahoj \n" );
+        //System.out.print("svet");
+        //int a = 4;
+        //int b = 8;
+
+        //if (a == b){
+           // System.out.println("A sa rovna B");
+
+       // } else {
+            //System.out.println("A sa nerovna B");
+
+        }
+
+    }
+}
