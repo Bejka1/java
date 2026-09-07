@@ -1,0 +1,28 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Vitaj v kalkulačke");
+        System.out.println("Zadaj prve cislo:");
+
+        int prve_cislo = scanner.nextInt();
+
+        System.out.println("Zadaj druhe cislo:");
+
+        int druhe_cislo = scanner.nextInt();
+
+        int sucet = prve_cislo + druhe_cislo;
+        int rozdiel = prve_cislo - druhe_cislo;
+
+        System.out.println("Súčet: " + sucet);
+        System.out.println("Rozdiel: " + rozdiel);
+
+
+    }
+}
