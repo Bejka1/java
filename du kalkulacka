@@ -1,0 +1,40 @@
+```java
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Vitaj v kalkulačke");
+
+        System.out.println("Zadaj prve cislo:");
+        int prve_cislo = scanner.nextInt();
+
+        System.out.println("Zadaj druhe cislo:");
+        int druhe_cislo = scanner.nextInt();
+
+        System.out.println("Aku operaciu chces vykonat? (+, -, *, /)");
+        char operacia = scanner.next().charAt(0);
+
+        if (operacia == '+') {
+            System.out.println("Vysledok: " + (prve_cislo + druhe_cislo));
+        }
+        else if (operacia == '-') {
+            System.out.println("Vysledok: " + (prve_cislo - druhe_cislo));
+        }
+        else if (operacia == '*') {
+            System.out.println("Vysledok: " + (prve_cislo * druhe_cislo));
+        }
+        else if (operacia == '/') {
+            System.out.println("Vysledok: " + ((double) prve_cislo / druhe_cislo));
+        }
+        else {
+            System.out.println("Neznama operacia.");
+        }
+    }
+}
+```
