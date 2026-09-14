@@ -1,0 +1,15 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        int c = scitaj( 4, 5);
+        System.out.println(c);
+    }
+
+        static int scitaj (int a, int b){
+            return a+b;
+        }
+}
