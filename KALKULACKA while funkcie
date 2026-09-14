@@ -1,0 +1,72 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        boolean a = true;
+
+        System.out.println("Vitaj v kalkulačke");
+
+        while (a) {
+
+            System.out.println("Zadaj prve cislo:");
+            int prve_cislo = scanner.nextInt();
+
+            System.out.println("Zadaj druhe cislo:");
+            int druhe_cislo = scanner.nextInt();
+
+            System.out.println("Aku operaciu chces vykonat? (+, -, *, /)");
+            char operacia = scanner.next().charAt(0);
+
+            if (operacia == '+') {
+                System.out.println("Vysledok: " + scitaj(prve_cislo, druhe_cislo));
+            }
+            else if (operacia == '-') {
+                System.out.println("Vysledok: " + odcitaj(prve_cislo, druhe_cislo));
+            }
+            else if (operacia == '*') {
+                System.out.println("Vysledok: " + vynasob(prve_cislo, druhe_cislo));
+            }
+            else if (operacia == '/') {
+                System.out.println("Vysledok: " + vydel(prve_cislo, druhe_cislo));
+            }
+            else {
+                System.out.println("Neznama operacia.");
+            }
+
+            scanner.nextLine();
+
+            System.out.println("Chces zastavit? (ano/nie)");
+            String odpoved = scanner.nextLine();
+
+            if (odpoved.equals("ano")) {
+                a = false;
+            }
+        }
+
+        System.out.println("Kalkulacka sa ukoncila.");
+    }
+
+
+    static int scitaj(int x, int y) {
+        return x + y;
+    }
+
+    static int odcitaj(int x, int y) {
+        return x - y;
+    }
+
+    static int vynasob(int x, int y) {
+        return x * y;
+    }
+
+    static double vydel(int x, int y) {
+        return (double) x / y;
+    }
+}
+
