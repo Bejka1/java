@@ -1,0 +1,22 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        //Scanner scanner = new Scanner(System.in);
+
+        //System.out.println("Zadaj pocet");
+        //int pocet = scanner.nextInt();
+
+        for (float i = 0; i < 10; i = i + 0.1f) {
+            int medzery = Math.abs(((int) (10 * Math.sin(i))));
+            for (float j = 0; j < medzery; j++){
+                System.out.printf(" ");
+            }
+
+            System.out.printf("# \n ");
+        }
+    }
+}
