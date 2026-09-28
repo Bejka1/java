@@ -1,0 +1,76 @@
+//MAIN
+package com.company;
+
+
+
+public class Main {
+
+    public static void main(String[] args) {
+        Ziak ziak = new Ziak(87,54,17);
+        ziak.setVek(18);
+        ziak.setVek(-1);
+        InkrementujVekZiaka(ziak);
+        ziak.PrintFormattedZiakInfo();
+    }
+    public static void InkrementujVekZiaka(Ziak ziak){
+        int currentVek = ziak.getVek();
+        ziak.setVek(currentVek + 1);
+    }
+
+
+}
+
+//ZIAK
+
+package com.company;
+
+public class Ziak {
+    private int cisloSk;
+    private int ISIC;
+    private  int vek;
+
+    public int getCisloSkr() {
+        return cisloSk;
+    }
+
+    public void setCisloSk(int cisloSk){
+        this.cisloSk = cisloSk;
+    }
+
+    public  int getVek(){
+        return vek;
+    }
+
+    public void setVek(int vek){
+        if (vek >= 0 && vek<= 100){
+            this.vek = vek;
+        }
+        else{
+            System.out.println("Nespravny vek");
+        }
+    }
+
+
+    Ziak(int cisloSk , int ISIC , int vek){
+        if (vek < 0) {
+            System.out.println("VEK NEMOZE BYT NA NULE");
+            return;
+        }
+
+        this.cisloSk = cisloSk;
+        this.ISIC = ISIC;
+        this.vek = vek;
+    }
+
+    Ziak() {
+
+    }
+
+    public void PrintFormattedZiakInfo(){
+        System.out.println("***ziak***");
+        System.out.println("***cislo sk= " + cisloSk);
+        System.out.println("isisc " + ISIC);
+        System.out.println("vek= " + vek);
+
+    }
+}
