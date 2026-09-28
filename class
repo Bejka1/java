@@ -1,0 +1,34 @@
+package com.company;
+
+
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Ziak ziak = new Ziak();
+
+        ziak.cisloSk = 1;
+        ziak.ISIC = 456789;
+        ziak.vek = 17;
+
+        ziak.PrintFormattedZiakInfo();
+    }
+}
+
+/////
+package com.company;
+
+public class Ziak {
+    public int cisloSk;
+    public int ISIC;
+    public int vek;
+
+    public void PrintFormattedZiakInfo(){
+        System.out.println("***ziak***");
+        System.out.println("***cislo sk= " + cisloSk);
+        System.out.println("isisc " + ISIC);
+        System.out.println("vek= " + vek);
+
+    }
+}
